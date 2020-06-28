@@ -9,32 +9,32 @@
 #ifndef HIDPS2KeyboardWrapper_h
 #define HIDPS2KeyboardWrapper_h
 
-#include <IOKit/hid/IOHIDDevice.h>
+#include "LegacyIOHIDDevice.h"
 
 class HIDPS2KeyboardWrapper : public IOHIDDevice
 {
     OSDeclareDefaultStructors(HIDPS2KeyboardWrapper)
 
 public:
-    virtual bool start(IOService *provider);
+    virtual bool start(IOService *provider) APPLE_KEXT_OVERRIDE;
     
-    virtual IOReturn setProperties(OSObject *properties);
+    virtual IOReturn setProperties(OSObject *properties) APPLE_KEXT_OVERRIDE;
     
-    virtual IOReturn newReportDescriptor(IOMemoryDescriptor **descriptor) const;
+    virtual IOReturn newReportDescriptor(IOMemoryDescriptor **descriptor) const APPLE_KEXT_OVERRIDE;
     
-    virtual IOReturn setReport(IOMemoryDescriptor *report,IOHIDReportType reportType,IOOptionBits options=0);
-    virtual IOReturn getReport(IOMemoryDescriptor *report,IOHIDReportType reportType,IOOptionBits options);
+    virtual IOReturn setReport(IOMemoryDescriptor *report,IOHIDReportType reportType,IOOptionBits options=0) APPLE_KEXT_OVERRIDE;
+    virtual IOReturn getReport(IOMemoryDescriptor *report,IOHIDReportType reportType,IOOptionBits options) APPLE_KEXT_OVERRIDE;
     
-    virtual OSString* newManufacturerString() const;
-    virtual OSNumber* newPrimaryUsageNumber() const;
-    virtual OSNumber* newPrimaryUsagePageNumber() const;
-    virtual OSNumber* newProductIDNumber() const;
-    virtual OSString* newProductString() const;
-    virtual OSString* newSerialNumberString() const;
-    virtual OSString* newTransportString() const;
-    virtual OSNumber* newVendorIDNumber() const;
+    virtual OSString* newManufacturerString() const APPLE_KEXT_OVERRIDE;
+    virtual OSNumber* newPrimaryUsageNumber() const APPLE_KEXT_OVERRIDE;
+    virtual OSNumber* newPrimaryUsagePageNumber() const APPLE_KEXT_OVERRIDE;
+    virtual OSNumber* newProductIDNumber() const APPLE_KEXT_OVERRIDE;
+    virtual OSString* newProductString() const APPLE_KEXT_OVERRIDE;
+    virtual OSString* newSerialNumberString() const APPLE_KEXT_OVERRIDE;
+    virtual OSString* newTransportString() const APPLE_KEXT_OVERRIDE;
+    virtual OSNumber* newVendorIDNumber() const APPLE_KEXT_OVERRIDE;
     
-    virtual OSNumber* newLocationIDNumber() const;
+    virtual OSNumber* newLocationIDNumber() const APPLE_KEXT_OVERRIDE;
 };
 
 #endif /* HIDPS2KeyboardWrapper_h */

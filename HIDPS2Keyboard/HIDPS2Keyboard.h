@@ -1,3 +1,4 @@
+#include "LegacyIOService.h"
 #include <IOKit/IOLib.h>
 #include <IOKit/IOKitKeys.h>
 #include <IOKit/acpi/IOACPIPlatformDevice.h>

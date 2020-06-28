@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B5FA23124A478F500B98C65 /* LegacyLibkernMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B5FA22A24A478F500B98C65 /* LegacyLibkernMacros.h */; };
+		5B5FA23324A478F500B98C65 /* LegacyIOHIPointing.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B5FA22C24A478F500B98C65 /* LegacyIOHIPointing.h */; };
+		5B5FA23424A478F500B98C65 /* LegacyIOService.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B5FA22D24A478F500B98C65 /* LegacyIOService.h */; };
+		5B5FA23524A478F500B98C65 /* LegacyIOHIKeyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B5FA22E24A478F500B98C65 /* LegacyIOHIKeyboard.h */; };
+		5B5FA23624A478F500B98C65 /* LegacyIOHIDDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B5FA22F24A478F500B98C65 /* LegacyIOHIDDevice.h */; };
+		5B5FA23724A478F500B98C65 /* compat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B5FA23024A478F500B98C65 /* compat.cpp */; };
+		5B5FA23924A4791300B98C65 /* libkmod.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5FA22B24A478F500B98C65 /* libkmod.a */; };
 		F1B927831CC16FAC00CD6457 /* HIDPS2KeyboardWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F1B927811CC16FAC00CD6457 /* HIDPS2KeyboardWrapper.cpp */; };
 		F1B927841CC16FAC00CD6457 /* HIDPS2KeyboardWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = F1B927821CC16FAC00CD6457 /* HIDPS2KeyboardWrapper.h */; };
 		F1BBE87B1CC0E28400FBF79B /* HIDPS2Keyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = F1BBE87A1CC0E28400FBF79B /* HIDPS2Keyboard.h */; };
@@ -14,6 +21,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B5FA22A24A478F500B98C65 /* LegacyLibkernMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LegacyLibkernMacros.h; sourceTree = "<group>"; };
+		5B5FA22B24A478F500B98C65 /* libkmod.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libkmod.a; sourceTree = "<group>"; };
+		5B5FA22C24A478F500B98C65 /* LegacyIOHIPointing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LegacyIOHIPointing.h; sourceTree = "<group>"; };
+		5B5FA22D24A478F500B98C65 /* LegacyIOService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LegacyIOService.h; sourceTree = "<group>"; };
+		5B5FA22E24A478F500B98C65 /* LegacyIOHIKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LegacyIOHIKeyboard.h; sourceTree = "<group>"; };
+		5B5FA22F24A478F500B98C65 /* LegacyIOHIDDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LegacyIOHIDDevice.h; sourceTree = "<group>"; };
+		5B5FA23024A478F500B98C65 /* compat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = compat.cpp; sourceTree = "<group>"; };
 		F1B927811CC16FAC00CD6457 /* HIDPS2KeyboardWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HIDPS2KeyboardWrapper.cpp; sourceTree = "<group>"; };
 		F1B927821CC16FAC00CD6457 /* HIDPS2KeyboardWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIDPS2KeyboardWrapper.h; sourceTree = "<group>"; };
 		F1BBE8771CC0E28400FBF79B /* HIDPS2Keyboard.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HIDPS2Keyboard.kext; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -27,17 +41,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B5FA23924A4791300B98C65 /* libkmod.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B5FA22924A478E500B98C65 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				5B5FA23024A478F500B98C65 /* compat.cpp */,
+				5B5FA22F24A478F500B98C65 /* LegacyIOHIDDevice.h */,
+				5B5FA22E24A478F500B98C65 /* LegacyIOHIKeyboard.h */,
+				5B5FA22C24A478F500B98C65 /* LegacyIOHIPointing.h */,
+				5B5FA22D24A478F500B98C65 /* LegacyIOService.h */,
+				5B5FA22A24A478F500B98C65 /* LegacyLibkernMacros.h */,
+				5B5FA22B24A478F500B98C65 /* libkmod.a */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		5B5FA23824A4791300B98C65 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F1BBE86D1CC0E28400FBF79B = {
 			isa = PBXGroup;
 			children = (
+				5B5FA22924A478E500B98C65 /* Library */,
 				F1BBE8791CC0E28400FBF79B /* HIDPS2Keyboard */,
 				F1BBE8781CC0E28400FBF79B /* Products */,
+				5B5FA23824A4791300B98C65 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,7 +106,12 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B5FA23424A478F500B98C65 /* LegacyIOService.h in Headers */,
+				5B5FA23624A478F500B98C65 /* LegacyIOHIDDevice.h in Headers */,
+				5B5FA23524A478F500B98C65 /* LegacyIOHIKeyboard.h in Headers */,
+				5B5FA23324A478F500B98C65 /* LegacyIOHIPointing.h in Headers */,
 				F1BBE87B1CC0E28400FBF79B /* HIDPS2Keyboard.h in Headers */,
+				5B5FA23124A478F500B98C65 /* LegacyLibkernMacros.h in Headers */,
 				F1B927841CC16FAC00CD6457 /* HIDPS2KeyboardWrapper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -100,7 +143,7 @@
 		F1BBE86E1CC0E28400FBF79B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = coolstar;
 				TargetAttributes = {
 					F1BBE8761CC0E28400FBF79B = {
@@ -110,10 +153,11 @@
 			};
 			buildConfigurationList = F1BBE8711CC0E28400FBF79B /* Build configuration list for PBXProject "HIDPS2Keyboard" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = F1BBE86D1CC0E28400FBF79B;
 			productRefGroup = F1BBE8781CC0E28400FBF79B /* Products */;
@@ -142,6 +186,7 @@
 			files = (
 				F1B927831CC16FAC00CD6457 /* HIDPS2KeyboardWrapper.cpp in Sources */,
 				F1BBE87D1CC0E28400FBF79B /* HIDPS2Keyboard.cpp in Sources */,
+				5B5FA23724A478F500B98C65 /* compat.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,18 +197,29 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -196,18 +252,29 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -232,9 +299,15 @@
 		F1BBE8821CC0E28400FBF79B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1.0.0d1;
 				INFOPLIST_FILE = HIDPS2Keyboard/Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HIDPS2Keyboard",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)",
+				);
 				MODULE_NAME = org.coolstar.HIDPS2Keyboard;
 				MODULE_VERSION = 1.0.0d1;
 				PRODUCT_BUNDLE_IDENTIFIER = org.coolstar.HIDPS2Keyboard;
@@ -246,9 +319,15 @@
 		F1BBE8831CC0E28400FBF79B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1.0.0d1;
 				INFOPLIST_FILE = HIDPS2Keyboard/Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HIDPS2Keyboard",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)",
+				);
 				MODULE_NAME = org.coolstar.HIDPS2Keyboard;
 				MODULE_VERSION = 1.0.0d1;
 				PRODUCT_BUNDLE_IDENTIFIER = org.coolstar.HIDPS2Keyboard;
